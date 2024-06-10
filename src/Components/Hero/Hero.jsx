@@ -29,10 +29,10 @@ const HeroData = [
   },
 ];
 
-const Hero = () => {
+const Hero = ({ handleOrderPopup }) => {
   const settings = {
     dots: false,
-    // arrows: false,
+    arrows: false,
     infinite: true,
     speed: 800,
     slidesToScroll: 1,
@@ -58,28 +58,51 @@ const Hero = () => {
                             gap-4 pt-12 text-center sm:order-1 sm:pl-3
                             sm:pt-0 sm:text-left"
                   >
-                    <h1 className="text-2xl font-bold sm:text-6xl lg:text-2xl">
+                    <h1
+                      data-aos="zoom-out"
+                      data-aos-duration="500"
+                      data-aos-once="true"
+                      className="text-2xl font-bold sm:text-6xl lg:text-2xl"
+                    >
                       {data.subtitle}
                     </h1>
-                    <h1 className="text-5xl font-bold sm:text-6xl lg:text-7xl">
+                    <h1
+                      data-aos="zoom-out"
+                      data-aos-duration="500"
+                      data-aos-once="true"
+                      className="text-5xl font-bold sm:text-6xl lg:text-7xl"
+                    >
                       {data.title}
                     </h1>
                     <h1
+                      data-aos="zoom-out"
+                      data-aos-duration="500"
+                      data-aos-once="true"
                       className="text-5xl font-bold uppercase text-white
-                     sm:text-[80px] md:text-[100px] lg:text-[150px] dark:text-white/5"
+                     dark:text-white/5 sm:text-[80px] md:text-[100px] lg:text-[150px]"
                     >
                       {data.title2}
                     </h1>
-                    <div>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-offset="0"
+                      data-aos-duration="500"
+                      data-aos-delay="300"
+                    >
                       <Button
                         text="Shop By Category"
                         bgColor="bg-primary"
                         textColor="text-white"
+                        handler={handleOrderPopup}
                       />
                     </div>
                   </div>
                   <div className="order-1 sm:order-2">
-                    <div>
+                    <div
+                      data-aos="zoom-out"
+                      data-aos-once="true"
+                      className="relative z-10"
+                    >
                       <img
                         src={data.img}
                         alt={data.title2}

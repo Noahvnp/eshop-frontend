@@ -44,7 +44,7 @@ const DropdownLinks = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({ handleOrderPopup }) => {
   return (
     <div className="relative z-40 bg-white duration-200 dark:bg-gray-900 dark:text-white">
       <div className="py-4">
@@ -113,7 +113,7 @@ const Navbar = () => {
               />
             </div>
             {/* Order Cart */}
-            <button className="relative p-3">
+            <button className="relative p-3" onClick={handleOrderPopup}>
               <FaCartShopping className="text-xl text-gray-600 dark:text-gray-400" />
               <div
                 className="absolute right-0 top-0 flex h-4 w-4 items-center justify-center
